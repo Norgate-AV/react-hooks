@@ -1,50 +1,62 @@
 {
-  "name": "@norgate-av/react-hooks",
-  "version": "1.0.0",
-  "description": "A collection of useful hooks for React",
-  "author": "damienbutt",
-  "license": "MIT",
-  "repository": "",
-  "main": "dist/index.js",
-  "module": "dist/index.es.js",
-  "types": "dist/index.d.ts",
-  "jsnext:main": "dist/index.es.js",
-  "engines": {
-    "node": ">=8",
-    "npm": ">=5"
-  },
-  "scripts": {
-    "test": "cross-env CI=1 react-scripts test --env=jsdom",
-    "test:watch": "react-scripts test --env=jsdom",
-    "build": "rollup -c && tsc -d --emitDeclarationOnly --noEmit false --declarationDir dist",
-    "start": "rollup -c -w",
-    "prepare": "yarn run build",
-    "predeploy": "cd example && yarn install && yarn run build",
-    "deploy": "gh-pages -d example/build"
-  },
-  "dependencies": {},
-  "peerDependencies": {
-    "react": "^16.9.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.2.2",
-    "@babel/runtime": "^7.3.1",
-    "@rollup/plugin-babel": "^5.2.0",
-    "@rollup/plugin-commonjs": "^15.0.0",
-    "@rollup/plugin-node-resolve": "^9.0.0",
-    "@rollup/plugin-typescript": "^5.0.2",
-    "@rollup/plugin-url": "^5.0.1",
-    "@testing-library/react-hooks": "^3.2.1",
-    "@types/jest": "^23.3.13",
-    "@types/react": "^16.7.22",
-    "cross-env": "^5.2.0",
-    "gh-pages": "^2.0.1",
-    "react": "^16.9.0",
-    "react-scripts": "^3.4.0",
-    "react-test-renderer": "^16.9.0",
-    "rollup": "^2.26.9",
-    "rollup-plugin-peer-deps-external": "^2.2.0",
-    "tslib": "^2.0.1",
-    "typescript": "^3.2.4"
-  }
+	"name": "@norgate-av/react-hooks",
+	"version": "0.1.0",
+	"description": "A collection of useful hooks for React",
+	"author": "Norgate AV Holdings Ltd",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Norgate-AV-Holdings-Ltd/react-hooks.git"
+	},
+	"main": "dist/index.js",
+	"module": "dist/index.es.js",
+	"jsnext:main": "dist/index.es.js",
+	"engines": {
+		"node": ">=8",
+		"npm": ">=5"
+	},
+	"scripts": {
+		"test": "cross-env CI=1 react-scripts test --env=jsdom",
+		"test:watch": "react-scripts test --env=jsdom",
+		"build": "rollup -c && yarn tsc --project tsconfig.types.json --emitDeclarationOnly",
+		"start": "rollup -c -w"
+	},
+	"dependencies": {},
+	"peerDependencies": {
+		"@crestron/ch5-crcomlib": "^1.1.0",
+		"@crestron/ch5-webxpanel": "^1.0.3",
+		"react": "^16.9.0"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.14.3",
+		"@babel/plugin-proposal-class-properties": "^7.13.0",
+		"@babel/plugin-proposal-object-rest-spread": "^7.14.4",
+		"@babel/preset-env": "^7.14.4",
+		"@babel/preset-react": "^7.13.13",
+		"@babel/preset-typescript": "^7.13.0",
+		"@babel/runtime": "^7.3.1",
+		"@crestron/ch5-crcomlib": "^1.1.0",
+		"@crestron/ch5-webxpanel": "^1.0.3",
+		"@rollup/plugin-babel": "^5.2.0",
+		"@rollup/plugin-commonjs": "^15.0.0",
+		"@rollup/plugin-node-resolve": "^9.0.0",
+		"@rollup/plugin-typescript": "^5.0.2",
+		"@rollup/plugin-url": "^5.0.1",
+		"@testing-library/react-hooks": "^3.2.1",
+		"@types/jest": "^23.3.13",
+		"@types/react": "^16.14.8",
+		"cross-env": "^5.2.0",
+		"react": "^16.9.0",
+		"react-scripts": "^3.4.0",
+		"react-test-renderer": "^16.9.0",
+		"rollup": "^2.50.5",
+		"rollup-plugin-peer-deps-external": "^2.2.0",
+		"typescript": "^3.2.4"
+	},
+	"bugs": {
+		"url": "https://github.com/Norgate-AV-Holdings-Ltd/react-hooks/issues"
+	},
+	"files": [
+		"dist"
+	]
 }

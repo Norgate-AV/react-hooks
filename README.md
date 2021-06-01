@@ -10,27 +10,29 @@
 npm install --save @norgate-av/react-hooks
 ```
 
+or
+
+```bash
+yarn add @norgate-av/react-hooks
+```
+
 ## Usage
 
 ```tsx
-import * as React from 'react'
+import React from "react";
 
-import { useMyHook } from '@norgate-av/react-hooks'
+import { useMyHook } from "@norgate-av/react-hooks";
 
-const Example = () => {
-  const example = useMyHook()
-  return (
-    <div>
-      {example}
-    </div>
-  )
-}
+export const Example = () => {
+	const example = useMyHook();
+	return (
+        <div>
+            {example}
+        </div>;
+    )
+};
 ```
 
 ## License
 
-MIT © [damienbutt](https://github.com/damienbutt)
-
----
-
-This hook is created using [create-react-hook](https://github.com/hermanya/create-react-hook).
+MIT © [Norgate AV Holdings Ltd](https://github.com/norgate-av-holdings-ltd)
