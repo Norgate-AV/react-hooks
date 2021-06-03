@@ -1,20 +1,20 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect } from "react";
 import { subscribeState, unsubscribeState } from "@crestron/ch5-crcomlib";
 
 export const useSubscribeAnalog = (signalName: string) => {
-    const [feedback, setFeedback] = useState<number>(0);
+	const [feedback, setFeedback] = useState<number>(0);
 
-    useEffect(() => {
-        
-        const subscriptionId = subscribeState("number", signalName, setFeedback);
+	useEffect(() => {
+		const subscriptionId = subscribeState("number", signalName, (value) => {
+			setFeedback(value);
+		});
 
-        return () => {
-            unsubscribeState("number", signalName, subscriptionId);
-        }
+		return () => {
+			unsubscribeState("number", signalName, subscriptionId);
+		};
+	}, [signalName]);
 
-    }, [signalName]);
-
-    return feedback;
-}
+	return feedback;
+};
 
 export const useSubscribeNumber = useSubscribeAnalog;
