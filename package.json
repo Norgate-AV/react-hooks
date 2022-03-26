@@ -27,7 +27,7 @@
 	"peerDependencies": {
 		"@crestron/ch5-crcomlib": "^1.1.0",
 		"@crestron/ch5-webxpanel": "^1.0.3",
-		"react": "^16.9.0"
+		"react": "^17.0.2"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.14.3",
@@ -46,11 +46,11 @@
 		"@rollup/plugin-url": "^5.0.1",
 		"@testing-library/react-hooks": "^3.2.1",
 		"@types/jest": "^23.3.13",
-		"@types/react": "^16.14.8",
+		"@types/react": "^17.0.43",
 		"cross-env": "^5.2.0",
 		"cz-conventional-changelog": "3.3.0",
 		"husky": "^7.0.4",
-		"react": "^16.9.0",
+		"react": "^17.0.2",
 		"react-scripts": "^3.4.0",
 		"react-test-renderer": "^16.9.0",
 		"rollup": "^2.50.5",
