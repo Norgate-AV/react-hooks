@@ -19,7 +19,8 @@
 		"test": "cross-env CI=1 react-scripts test --env=jsdom",
 		"test:watch": "react-scripts test --env=jsdom",
 		"build": "rollup -c && yarn tsc --project tsconfig.types.json --emitDeclarationOnly",
-		"start": "rollup -c -w"
+		"start": "rollup -c -w",
+		"commit": "git-cz"
 	},
 	"dependencies": {},
 	"peerDependencies": {
@@ -46,6 +47,7 @@
 		"@types/jest": "^23.3.13",
 		"@types/react": "^16.14.8",
 		"cross-env": "^5.2.0",
+		"cz-conventional-changelog": "3.3.0",
 		"react": "^16.9.0",
 		"react-scripts": "^3.4.0",
 		"react-test-renderer": "^16.9.0",
@@ -58,5 +60,10 @@
 	},
 	"files": [
 		"dist"
-	]
+	],
+	"config": {
+		"commitizen": {
+			"path": "./node_modules/cz-conventional-changelog"
+		}
+	}
 }
