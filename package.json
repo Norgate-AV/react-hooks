@@ -20,7 +20,8 @@
 		"test:watch": "react-scripts test --env=jsdom",
 		"build": "rollup -c && yarn tsc --project tsconfig.types.json --emitDeclarationOnly",
 		"start": "rollup -c -w",
-		"commit": "git-cz"
+		"commit": "git-cz",
+		"prepare": "husky install"
 	},
 	"dependencies": {},
 	"peerDependencies": {
@@ -48,6 +49,7 @@
 		"@types/react": "^16.14.8",
 		"cross-env": "^5.2.0",
 		"cz-conventional-changelog": "3.3.0",
+		"husky": "^7.0.4",
 		"react": "^16.9.0",
 		"react-scripts": "^3.4.0",
 		"react-test-renderer": "^16.9.0",
