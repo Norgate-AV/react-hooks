@@ -2116,10 +2116,10 @@
   dependencies:
     chalk "^4.0.0"
 
-"@crestron/ch5-crcomlib@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@crestron/ch5-crcomlib/-/ch5-crcomlib-1.1.0.tgz#7b851d0b91a41a600afa047b0b781779b79f8160"
-  integrity sha512-2x22yqa/uaVA/9tdCZmZfcHmlWdFlqw49ulC3UZbXBh/K38wgLxMKBxIfV//kOwiAuJ3nFFj0WASvZDL+jNEhw==
+"@crestron/ch5-crcomlib@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@crestron/ch5-crcomlib/-/ch5-crcomlib-1.2.0.tgz#5e7867a801c8b894bc831a61f5da7b2254d50dc5"
+  integrity sha512-GsEbXOKbqrgAibxSWUaU+Ep8zvpxk0/ST8n0jSKrShUWkPOpoodIO4b7Hsx0vv9UgjuUShNbAFWmLUmmAZQeYA==
   dependencies:
     "@types/dom-inputevent" "^1.0.1"
     "@types/hammerjs" "^2.0.35"
@@ -2134,10 +2134,10 @@
     rxjs "6.3.3"
     swiper "^4.5.0"
 
-"@crestron/ch5-webxpanel@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@crestron/ch5-webxpanel/-/ch5-webxpanel-1.0.3.tgz#0139ab9e5e875254c727bb969d33653fd3e23526"
-  integrity sha512-PvE6KI3XflFizy05CwcA+aIcEv9bENue6FRM8tRlsykkxMaYjJ61GeX8HrQOD0c7U/MM9KxV822dAiggFEUp9g==
+"@crestron/ch5-webxpanel@^1.2.5":
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/@crestron/ch5-webxpanel/-/ch5-webxpanel-1.2.5.tgz#a426435190c29e293391416e31d8190839f7a347"
+  integrity sha512-sR8kj2uw6Ay74vFj5t2UD5YN64xCpuVVJloxmUI9Yl5rDswlqv0sNQogwopuGVzSLhcc0kHYfublTZNJcdtFpg==
 
 "@cspotcode/source-map-consumer@0.8.0":
   version "0.8.0"
