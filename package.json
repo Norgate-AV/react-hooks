@@ -28,7 +28,7 @@
 	"peerDependencies": {
 		"@crestron/ch5-crcomlib": "^1.2.0",
 		"@crestron/ch5-webxpanel": "^1.2.5",
-		"react": "^17.0.2"
+		"react": ">=16"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.17.8",
