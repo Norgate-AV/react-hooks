@@ -2,7 +2,6 @@
 	"name": "@norgate-av/react-hooks",
 	"version": "0.0.0-development",
 	"description": "A collection of useful hooks for React",
-	"author": "Norgate AV Solutions Ltd",
 	"license": "MIT",
 	"repository": {
 		"type": "git",
