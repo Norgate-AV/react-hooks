@@ -2,7 +2,10 @@ import { useState, useEffect } from "react";
 import { subscribeState, unsubscribeState } from "@crestron/ch5-crcomlib";
 
 /**
- * @deprecated
+ * @deprecated since version 0.1.3.
+ * Will be removed in the next major release.
+ *
+ * Please use `useCrestronSubscribeDigital` from {@link https://www.npmjs.com/package/@norgate-av/react-crestron-ch5-hooks @norgate-av/react-crestron-ch5-hooks} instead.
  * */
 export const useSubscribeDigital = (signalName: string) => {
 	const [feedback, setFeedback] = useState<boolean>(false);
@@ -25,6 +28,9 @@ export const useSubscribeDigital = (signalName: string) => {
 };
 
 /**
- * @deprecated
+ * @deprecated since version 0.1.3.
+ * Will be removed in the next major release.
+ *
+ * Please use `useCrestronSubscribeDigital` from {@link https://www.npmjs.com/package/@norgate-av/react-crestron-ch5-hooks @norgate-av/react-crestron-ch5-hooks} instead.
  * */
 export const useSubscribeBoolean = useSubscribeDigital;

@@ -2,7 +2,10 @@ import { useState, useEffect } from "react";
 import { subscribeState, unsubscribeState } from "@crestron/ch5-crcomlib";
 
 /**
- * @deprecated
+ * @deprecated since version 0.1.3.
+ * Will be removed in the next major release.
+ *
+ * Please use `useCrestronSubscribeSerial` from {@link https://www.npmjs.com/package/@norgate-av/react-crestron-ch5-hooks @norgate-av/react-crestron-ch5-hooks} instead.
  * */
 export const useSubscribeSerial = (signalName: string) => {
 	const [feedback, setFeedback] = useState<string>("");
@@ -25,6 +28,9 @@ export const useSubscribeSerial = (signalName: string) => {
 };
 
 /**
- * @deprecated
+ * @deprecated since version 0.1.3.
+ * Will be removed in the next major release.
+ *
+ * Please use `useCrestronSubscribeSerial` from {@link https://www.npmjs.com/package/@norgate-av/react-crestron-ch5-hooks @norgate-av/react-crestron-ch5-hooks} instead.
  * */
 export const useSubscribeString = useSubscribeSerial;

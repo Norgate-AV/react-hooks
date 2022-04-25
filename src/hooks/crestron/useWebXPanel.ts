@@ -7,7 +7,12 @@ import WebXPanel, {
 } from "@crestron/ch5-webxpanel";
 
 /**
- * @deprecated
+ * @deprecated since version 0.1.3.
+ * Will be removed in the next major release.
+ *
+ * There is currently no replacement planned for this hook.
+ * If you need to use this hook, it is recommended to implement
+ * a copy of it in your local project.
  * */
 export const useWebXPanel = (host = "", ipId = "0x03", roomId = "") => {
 	console.log(`WebXPanel version: ${getVersion()}`);
