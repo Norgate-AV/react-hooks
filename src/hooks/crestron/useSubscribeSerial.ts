@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import { subscribeState, unsubscribeState } from "@crestron/ch5-crcomlib";
 
+/**
+ * @deprecated
+ * */
 export const useSubscribeSerial = (signalName: string) => {
 	const [feedback, setFeedback] = useState<string>("");
 
@@ -21,4 +24,7 @@ export const useSubscribeSerial = (signalName: string) => {
 	return feedback;
 };
 
+/**
+ * @deprecated
+ * */
 export const useSubscribeString = useSubscribeSerial;

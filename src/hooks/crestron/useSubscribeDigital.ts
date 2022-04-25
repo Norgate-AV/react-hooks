@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import { subscribeState, unsubscribeState } from "@crestron/ch5-crcomlib";
 
+/**
+ * @deprecated
+ * */
 export const useSubscribeDigital = (signalName: string) => {
 	const [feedback, setFeedback] = useState<boolean>(false);
 
@@ -21,4 +24,7 @@ export const useSubscribeDigital = (signalName: string) => {
 	return feedback;
 };
 
+/**
+ * @deprecated
+ * */
 export const useSubscribeBoolean = useSubscribeDigital;
