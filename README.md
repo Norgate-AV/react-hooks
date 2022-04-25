@@ -29,9 +29,7 @@ This project is maintained by the following person(s) and a bunch of [awesome co
 ## Contributors :sparkles:
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg)](#contributors-)
-
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Thanks go to these awesome people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
@@ -41,7 +39,7 @@ Thanks go to these awesome people ([emoji key](https://allcontributors.org/docs/
 <!-- markdownlint-disable -->
 <table>
   <tr>
-
+    <td align="center"><a href="https://github.com/features/security"><img src="https://avatars.githubusercontent.com/u/27347476?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dependabot</b></sub></a><br /><a href="#maintenance-dependabot" title="Maintenance">🚧</a></td>
   </tr>
 </table>
 
