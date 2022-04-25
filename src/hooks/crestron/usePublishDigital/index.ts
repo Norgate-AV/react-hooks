@@ -7,7 +7,7 @@ import { publishEvent } from "@crestron/ch5-crcomlib";
  * Please use `useCrestronPublishDigital` from {@link https://www.npmjs.com/package/@norgate-av/react-crestron-ch5-hooks @norgate-av/react-crestron-ch5-hooks} instead.
  * */
 export const usePublishDigital = (signalName: string) => {
-	return (value: boolean) => publishEvent("boolean", signalName, value);
+    return (value: boolean) => publishEvent("boolean", signalName, value);
 };
 
 /**
@@ -17,3 +17,4 @@ export const usePublishDigital = (signalName: string) => {
  * Please use `useCrestronPublishDigital` from {@link https://www.npmjs.com/package/@norgate-av/react-crestron-ch5-hooks @norgate-av/react-crestron-ch5-hooks} instead.
  * */
 export const usePublishBoolean = usePublishDigital;
+export default usePublishDigital;

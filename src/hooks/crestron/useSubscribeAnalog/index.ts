@@ -8,23 +8,23 @@ import { subscribeState, unsubscribeState } from "@crestron/ch5-crcomlib";
  * Please use `useCrestronSubscribeAnalog` from {@link https://www.npmjs.com/package/@norgate-av/react-crestron-ch5-hooks @norgate-av/react-crestron-ch5-hooks} instead.
  * */
 export const useSubscribeAnalog = (signalName: string) => {
-	const [feedback, setFeedback] = useState<number>(0);
+    const [feedback, setFeedback] = useState<number>(0);
 
-	useEffect(() => {
-		const subscriptionId = subscribeState(
-			"number",
-			signalName,
-			(value: number) => {
-				setFeedback(value);
-			}
-		);
+    useEffect(() => {
+        const subscriptionId = subscribeState(
+            "number",
+            signalName,
+            (value: number) => {
+                setFeedback(value);
+            },
+        );
 
-		return () => {
-			unsubscribeState("number", signalName, subscriptionId);
-		};
-	}, [signalName]);
+        return () => {
+            unsubscribeState("number", signalName, subscriptionId);
+        };
+    }, [signalName]);
 
-	return feedback;
+    return feedback;
 };
 
 /**
@@ -34,3 +34,4 @@ export const useSubscribeAnalog = (signalName: string) => {
  * Please use `useCrestronSubscribeAnalog` from {@link https://www.npmjs.com/package/@norgate-av/react-crestron-ch5-hooks @norgate-av/react-crestron-ch5-hooks} instead.
  * */
 export const useSubscribeNumber = useSubscribeAnalog;
+export default useSubscribeAnalog;

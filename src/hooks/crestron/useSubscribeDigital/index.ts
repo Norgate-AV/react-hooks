@@ -8,23 +8,23 @@ import { subscribeState, unsubscribeState } from "@crestron/ch5-crcomlib";
  * Please use `useCrestronSubscribeDigital` from {@link https://www.npmjs.com/package/@norgate-av/react-crestron-ch5-hooks @norgate-av/react-crestron-ch5-hooks} instead.
  * */
 export const useSubscribeDigital = (signalName: string) => {
-	const [feedback, setFeedback] = useState<boolean>(false);
+    const [feedback, setFeedback] = useState<boolean>(false);
 
-	useEffect(() => {
-		const subscriptionId = subscribeState(
-			"boolean",
-			signalName,
-			(value: boolean) => {
-				setFeedback(value);
-			}
-		);
+    useEffect(() => {
+        const subscriptionId = subscribeState(
+            "boolean",
+            signalName,
+            (value: boolean) => {
+                setFeedback(value);
+            },
+        );
 
-		return () => {
-			unsubscribeState("boolean", signalName, subscriptionId);
-		};
-	}, [signalName]);
+        return () => {
+            unsubscribeState("boolean", signalName, subscriptionId);
+        };
+    }, [signalName]);
 
-	return feedback;
+    return feedback;
 };
 
 /**
@@ -34,3 +34,4 @@ export const useSubscribeDigital = (signalName: string) => {
  * Please use `useCrestronSubscribeDigital` from {@link https://www.npmjs.com/package/@norgate-av/react-crestron-ch5-hooks @norgate-av/react-crestron-ch5-hooks} instead.
  * */
 export const useSubscribeBoolean = useSubscribeDigital;
+export default useSubscribeDigital;
