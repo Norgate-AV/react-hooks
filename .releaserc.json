@@ -1,7 +1,5 @@
 {
-    "release": {
-        "branches": ["master"]
-    },
+    "branches": ["master"],
     "plugins": [
         [
             "@semantic-release/commit-analyzer",
@@ -12,7 +10,11 @@
                     { "type": "style", "release": "patch" }
                 ],
                 "parserOpts": {
-                    "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES"]
+                    "noteKeywords": [
+                        "BREAKING CHANGE",
+                        "BREAKING CHANGES",
+                        "BREAKING"
+                    ]
                 }
             }
         ],
@@ -30,6 +32,21 @@
                     "commitsSort": ["subject", "scope"]
                 }
             }
-        ]
+        ],
+        [
+            "@semantic-release/changelog",
+            {
+                "changelogTitle": "# Changelog"
+            }
+        ],
+        [
+            "@semantic-release/git",
+            {
+                "assets": ["CHANGELOG.md"],
+                "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+            }
+        ],
+        "@semantic-release/npm",
+        "@semantic-release/github"
     ]
 }
