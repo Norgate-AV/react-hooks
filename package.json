@@ -69,6 +69,8 @@
         "@commitlint/config-conventional": "^16.2.1",
         "@crestron/ch5-crcomlib": "^1.2.0",
         "@crestron/ch5-webxpanel": "^1.2.5",
+        "@semantic-release/changelog": "^6.0.1",
+        "@semantic-release/git": "^10.0.1",
         "@size-limit/preset-small-lib": "^7.0.8",
         "@testing-library/react": "^13.1.1",
         "@types/react": "^18.0.7",
