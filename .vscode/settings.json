@@ -17,5 +17,16 @@
         "**/*.js.map": true,
         "node_modules": true
     },
-    "docwriter.progress.trackFunctions": true
+    "docwriter.progress.trackFunctions": true,
+    "markdownlint.config": {
+        // "default": true,
+        // "MD003": { "style": "atx_closed" },
+        // "MD007": { "indent": 4 },
+        // "no-hard-tabs": false
+        "MD026": false,
+        "MD033": false
+    },
+    "editor.codeActionsOnSave": {
+        "source.fixAll.markdownlint": true
+    }
 }
