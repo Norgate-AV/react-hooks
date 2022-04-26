@@ -4,7 +4,7 @@
 
 ---
 
-A collection of useful hooks ⚓ for React
+A collection of utility hooks ⚓ for React
 
 ## Installation :zap:
 
@@ -29,7 +29,9 @@ This project is maintained by the following person(s) and a bunch of [awesome co
 ## Contributors :sparkles:
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Thanks go to these awesome people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
