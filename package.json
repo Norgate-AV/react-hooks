@@ -1,62 +1,137 @@
 {
-	"name": "@norgate-av/react-hooks",
-	"version": "0.1.2",
-	"description": "A collection of useful hooks for React",
-	"author": "Norgate AV Holdings Ltd",
-	"license": "MIT",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/Norgate-AV-Holdings-Ltd/react-hooks.git"
-	},
-	"main": "dist/index.js",
-	"module": "dist/index.es.js",
-	"jsnext:main": "dist/index.es.js",
-	"engines": {
-		"node": ">=8",
-		"npm": ">=5"
-	},
-	"scripts": {
-		"test": "cross-env CI=1 react-scripts test --env=jsdom",
-		"test:watch": "react-scripts test --env=jsdom",
-		"build": "rollup -c && yarn tsc --project tsconfig.types.json --emitDeclarationOnly",
-		"start": "rollup -c -w"
-	},
-	"dependencies": {},
-	"peerDependencies": {
-		"@crestron/ch5-crcomlib": "^1.1.0",
-		"@crestron/ch5-webxpanel": "^1.0.3",
-		"react": "^16.9.0"
-	},
-	"devDependencies": {
-		"@babel/core": "^7.14.3",
-		"@babel/plugin-proposal-class-properties": "^7.13.0",
-		"@babel/plugin-proposal-object-rest-spread": "^7.14.4",
-		"@babel/preset-env": "^7.14.4",
-		"@babel/preset-react": "^7.13.13",
-		"@babel/preset-typescript": "^7.13.0",
-		"@babel/runtime": "^7.3.1",
-		"@crestron/ch5-crcomlib": "^1.1.0",
-		"@crestron/ch5-webxpanel": "^1.0.3",
-		"@rollup/plugin-babel": "^5.2.0",
-		"@rollup/plugin-commonjs": "^15.0.0",
-		"@rollup/plugin-node-resolve": "^9.0.0",
-		"@rollup/plugin-typescript": "^5.0.2",
-		"@rollup/plugin-url": "^5.0.1",
-		"@testing-library/react-hooks": "^3.2.1",
-		"@types/jest": "^23.3.13",
-		"@types/react": "^16.14.8",
-		"cross-env": "^5.2.0",
-		"react": "^16.9.0",
-		"react-scripts": "^3.4.0",
-		"react-test-renderer": "^16.9.0",
-		"rollup": "^2.50.5",
-		"rollup-plugin-peer-deps-external": "^2.2.0",
-		"typescript": "^3.2.4"
-	},
-	"bugs": {
-		"url": "https://github.com/Norgate-AV-Holdings-Ltd/react-hooks/issues"
-	},
-	"files": [
-		"dist"
-	]
+    "name": "@norgate-av/react-hooks",
+    "version": "0.0.0-development",
+    "description": "A collection of utility hooks ⚓ for React 😀",
+    "keywords": [
+        "react",
+        "hooks"
+    ],
+    "license": "MIT",
+    "main": "dist/index.js",
+    "module": "dist/react-hooks.esm.js",
+    "typings": "dist/index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Norgate-AV-Solutions-Ltd/react-hooks.git"
+    },
+    "bugs": {
+        "url": "https://github.com/Norgate-AV-Solutions-Ltd/react-hooks/issues"
+    },
+    "files": [
+        "dist"
+    ],
+    "engines": {
+        "node": ">=14"
+    },
+    "scripts": {
+        "start": "yarn resolve:crcomlib && tsdx watch",
+        "build": "yarn clean:dist && yarn resolve:crcomlib && tsdx build --format cjs,esm,umd",
+        "test": "yarn resolve:crcomlib && tsdx test --passWithNoTests",
+        "test:watch": "yarn resolve:crcomlib && tsdx test --passWithNoTests --watch",
+        "test:coverage": "yarn clean:coverage && yarn resolve:crcomlib && tsdx test --passWithNoTests --coverage",
+        "lint": "eslint ./src",
+        "lint:fix": "eslint --fix ./src",
+        "prepare": "husky install",
+        "size": "size-limit",
+        "analyze": "size-limit --why",
+        "clean:dist": "rimraf dist",
+        "clean:coverage": "rimraf coverage",
+        "clean:all": "yarn clean:dist && yarn clean:coverage",
+        "semantic-release": "semantic-release",
+        "commit": "git-cz",
+        "pretty:fix": "prettier --write .",
+        "resolve:crcomlib": "run-script-os",
+        "resolve:crcomlib:default": "./node_modules/node-jq/bin/jq '.main=\"build_bundles/cjs/cr-com-lib.js\"' $npm_package_crestron_crcomlib_packageJson | sponge $npm_package_crestron_crcomlib_packageJson",
+        "resolve:crcomlib:windows": "./node_modules/node-jq/bin/jq \".main=\"\"build_bundles/cjs/cr-com-lib.js\"\"\" %npm_package_crestron_crcomlib_packageJson% | sponge %npm_package_crestron_crcomlib_packageJson%",
+        "doctoc": "doctoc --title '## Contents 📖' README.md",
+        "contrib:add": "all-contributors add",
+        "contrib:generate": "all-contributors generate",
+        "contrib:check": "all-contributors check"
+    },
+    "dependencies": {},
+    "peerDependencies": {
+        "@crestron/ch5-crcomlib": "^1.2.0",
+        "@crestron/ch5-webxpanel": "^1.2.5",
+        "react": ">=16"
+    },
+    "size-limit": [
+        {
+            "path": "dist/react-hooks.cjs.production.min.js",
+            "limit": "10 KB"
+        },
+        {
+            "path": "dist/react-hooks.esm.js",
+            "limit": "10 KB"
+        }
+    ],
+    "devDependencies": {
+        "@commitlint/cli": "^16.2.3",
+        "@commitlint/config-conventional": "^16.2.1",
+        "@crestron/ch5-crcomlib": "^1.2.0",
+        "@crestron/ch5-webxpanel": "^1.2.5",
+        "@semantic-release/changelog": "^6.0.1",
+        "@semantic-release/git": "^10.0.1",
+        "@size-limit/preset-small-lib": "^7.0.8",
+        "@testing-library/react": "^13.1.1",
+        "@types/react": "^18.0.7",
+        "@types/react-dom": "^18.0.2",
+        "@types/rimraf": "^3.0.2",
+        "@typescript-eslint/eslint-plugin": "^5.21.0",
+        "@typescript-eslint/parser": "^5.21.0",
+        "all-contributors-cli": "^6.20.0",
+        "babel-jest": "^28.0.0",
+        "cz-conventional-changelog": "3.3.0",
+        "doctoc": "^2.1.0",
+        "eslint": "^8.14.0",
+        "eslint-config-airbnb": "^19.0.4",
+        "eslint-config-airbnb-typescript": "^16.1.4",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-import": "^2.25.4",
+        "eslint-plugin-jsx-a11y": "^6.5.1",
+        "eslint-plugin-prettier": "^4.0.0",
+        "eslint-plugin-react": "^7.29.4",
+        "eslint-plugin-react-hooks": "^4.4.0",
+        "husky": "^7.0.4",
+        "lint-staged": "^12.4.0",
+        "node-jq": "^2.3.3",
+        "prettier": "^2.6.0",
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0",
+        "rimraf": "^3.0.2",
+        "run-script-os": "^1.1.6",
+        "semantic-release": "^19.0.2",
+        "size-limit": "^7.0.8",
+        "sponge": "^0.1.0",
+        "tsdx": "^0.14.1",
+        "tslib": "^2.4.0",
+        "typescript": "^4.6.3"
+    },
+    "crestron": {
+        "crcomlib": {
+            "root": "./node_modules/@crestron/ch5-crcomlib",
+            "packageJson": "./node_modules/@crestron/ch5-crcomlib/package.json",
+            "bundle": {
+                "name": "cr-com-lib.js",
+                "path": {
+                    "umd": "./node_modules/@crestron/ch5-crcomlib/build_bundles/umd/cr-com-lib.js",
+                    "cjs": "build_bundles/cjs/cr-com-lib.js"
+                }
+            }
+        }
+    },
+    "lint-staged": {
+        "*?(test|spec).{js,jsx,ts,tsx}": [
+            "yarn lint:fix",
+            "yarn pretty:fix",
+            "yarn test"
+        ],
+        "*.{css,scss,md,html,json,yml,yaml}": [
+            "yarn pretty:fix"
+        ]
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    }
 }
