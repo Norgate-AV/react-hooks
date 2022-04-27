@@ -2,6 +2,10 @@
 
 **NOTE:** Crestron related hooks have been deprecated. [Learn more here](DEPRECATED.md).
 
+<div align="center">
+ <img src="./assets/logo.svg" alt="react-logo" width="200" />
+</div>
+
 ---
 
 [![CI](https://github.com/Norgate-AV-Solutions-Ltd/react-hooks/actions/workflows/main.yml/badge.svg?branch=develop)](https://github.com/Norgate-AV-Solutions-Ltd/react-hooks/actions/workflows/main.yml)
