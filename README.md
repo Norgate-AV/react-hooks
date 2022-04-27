@@ -19,6 +19,18 @@
 
 A collection of utility hooks ⚓ for React
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+## Contents 📖
+
+-   [Installation :zap:](#installation-zap)
+-   [Team :soccer:](#team-soccer)
+-   [Contributors :sparkles:](#contributors-sparkles)
+-   [LICENSE :balance_scale:](#license-balance_scale)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Installation :zap:
 
 ```sh
