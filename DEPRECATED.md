@@ -1,4 +1,4 @@
-**DEPRECATION NOTICE**
+# DEPRECATION NOTICE
 
 The following Crestron related hooks in this library are now deprecated and will be removed in the next major version:
 
