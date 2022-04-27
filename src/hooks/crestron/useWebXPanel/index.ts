@@ -7,7 +7,7 @@ import WebXPanel, {
 } from "@crestron/ch5-webxpanel";
 
 /**
- * @deprecated since version 0.1.3.
+ * @deprecated since version 0.2.0.
  * Will be removed in the next major release.
  *
  * There is currently no replacement planned for this hook.
